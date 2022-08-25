@@ -6,7 +6,6 @@ body {
   margin: auto;
   color: gray;
   font-family: "Oswald", sans-serif;
-  padding-bottom: 40em;
   overflow-x: hidden;
 }
 
@@ -154,4 +153,8 @@ body {
 .indv-item {
   color: gray;
   width: 30%;
+}
+
+#footer-bg {
+  background-image: url("./assets/footer.png");
 }

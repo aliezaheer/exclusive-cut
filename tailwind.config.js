@@ -8,6 +8,7 @@ module.exports = {
         grayBorder: "#e8e8e8",
         pText: "#707070;",
         cardsBg: "rgb(214 163 82 / 10%)",
+        dGray: "#1f1f1f",
       },
     },
   },
