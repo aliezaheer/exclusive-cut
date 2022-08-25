@@ -23,7 +23,7 @@ const ServicesOffers = () => {
       title: "Body Treatments",
       description:
         "Sit amet consectetur adipisci elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      icon: "https://cdn-icons.flaticon.com/png/512/3132/premium/3132558.png?token=exp=1659963986~hmac=f6080ebd9ec1f13608d179cc9aac2b0f",
+      icon: "https://cdn-icons-png.flaticon.com/512/436/436512.png",
     },
     {
       id: 4,
@@ -48,6 +48,17 @@ const ServicesOffers = () => {
     },
   ];
 
+  const allServices = servicesOffers.map((ser) => (
+    <li className="indv-item ">
+      <ServiceBlock
+        key={ser.id}
+        title={ser.title}
+        description={ser.description}
+        icon={ser.icon}
+      />
+    </li>
+  ));
+
   return (
     <>
       <div className="relative text-center">
@@ -62,46 +73,10 @@ const ServicesOffers = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center text-center mt-16 space-x-12 mx-12 ">
-        <ServiceBlock
-          id={servicesOffers[0].id}
-          icon={servicesOffers[0].icon}
-          title={servicesOffers[0].title}
-          description={servicesOffers[0].description}
-        />
-        <ServiceBlock
-          id={servicesOffers[1].id}
-          icon={servicesOffers[1].icon}
-          title={servicesOffers[1].title}
-          description={servicesOffers[1].description}
-        />
-        <ServiceBlock
-          id={servicesOffers[2].id}
-          icon={servicesOffers[2].icon}
-          title={servicesOffers[2].title}
-          description={servicesOffers[2].description}
-        />
-      </div>
-
-      <div className="flex items-center justify-center text-center mt-16 space-x-12 mx-12 ">
-        <ServiceBlock
-          id={servicesOffers[3].id}
-          icon={servicesOffers[3].icon}
-          title={servicesOffers[3].title}
-          description={servicesOffers[3].description}
-        />
-        <ServiceBlock
-          id={servicesOffers[4].id}
-          icon={servicesOffers[4].icon}
-          title={servicesOffers[4].title}
-          description={servicesOffers[4].description}
-        />
-        <ServiceBlock
-          id={servicesOffers[5].id}
-          icon={servicesOffers[5].icon}
-          title={servicesOffers[5].title}
-          description={servicesOffers[5].description}
-        />
+      <div className="">
+        <ul className="flex flex-wrap basis-6/12 items-center justify-center text-center mt-16 space-x-12 mx-12">
+          {allServices}
+        </ul>
       </div>
     </>
   );

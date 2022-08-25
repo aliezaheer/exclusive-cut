@@ -1,0 +1,25 @@
+input {
+  background-color: white;
+  padding: 16px 100px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+select {
+  background-color: white;
+  padding: 16px 101px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.selectDate {
+  width: 97%;
+}
+
+.msgArea {
+  width: 97%;
+}
+
+.formBg {
+  background-image: url("../../assets/contact-bg.png");
+}

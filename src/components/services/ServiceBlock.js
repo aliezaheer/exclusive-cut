@@ -11,7 +11,7 @@ const ServiceBlock = (props) => {
           <button>
             <img
               className="w-11 p-3 rounded bg-myPeach mt-6"
-              src="https://cdn-icons.flaticon.com/png/512/3031/premium/3031716.png?token=exp=1659962412~hmac=bbea0cd4c996ca517b92a57e5d04e244"
+              src="https://cdn-icons-png.flaticon.com/512/545/545682.png"
               alt=""
             />
           </button>

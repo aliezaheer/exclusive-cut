@@ -5,7 +5,6 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import PricingCard from "./PricingCard";
-import { height } from "@mui/system";
 
 const cardData = [
   {
@@ -45,6 +44,16 @@ const cardData = [
     icon: "https://demo.webtend.net/html/qutter/assets/images/price/pp-image6.jpg",
   },
 ];
+
+const boxData = cardData.map((det) => (
+  <PricingCard
+    key={det.id}
+    id={det.id}
+    title={det.title}
+    description={det.description}
+    icon={det.icon}
+  />
+));
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -105,159 +114,26 @@ const PricingTabs = () => {
       </Box>
 
       <TabPanel value={value} index={0}>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[0].title}
-            icon={cardData[0].icon}
-            description={cardData[0].description}
-          />
-          <PricingCard
-            title={cardData[1].title}
-            icon={cardData[1].icon}
-            description={cardData[1].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[2].title}
-            icon={cardData[2].icon}
-            description={cardData[2].description}
-          />
-          <PricingCard
-            title={cardData[3].title}
-            icon={cardData[3].icon}
-            description={cardData[3].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[4].title}
-            icon={cardData[4].icon}
-            description={cardData[4].description}
-          />
-          <PricingCard
-            title={cardData[5].title}
-            icon={cardData[5].icon}
-            description={cardData[5].description}
-          />
+        <div className="flex flex-wrap justify-center space-x-10 ">
+          {boxData}
         </div>
       </TabPanel>
 
-      <div className="flex justify-center">
-        <TabPanel value={value} index={1}>
-          <div className="flex justify-center space-x-10 ">
-            <PricingCard
-              title={cardData[4].title}
-              icon={cardData[4].icon}
-              description={cardData[4].description}
-            />
-            <PricingCard
-              title={cardData[3].title}
-              icon={cardData[3].icon}
-              description={cardData[3].description}
-            />
-          </div>
-          <div className="flex justify-center space-x-10 ">
-            <PricingCard
-              title={cardData[5].title}
-              icon={cardData[5].icon}
-              description={cardData[5].description}
-            />
-            <PricingCard
-              title={cardData[1].title}
-              icon={cardData[1].icon}
-              description={cardData[1].description}
-            />
-          </div>
-          <div className="flex justify-center space-x-10 ">
-            <PricingCard
-              title={cardData[1].title}
-              icon={cardData[1].icon}
-              description={cardData[1].description}
-            />
-            <PricingCard
-              title={cardData[2].title}
-              icon={cardData[2].icon}
-              description={cardData[2].description}
-            />
-          </div>
-        </TabPanel>
-      </div>
+      <TabPanel value={value} index={1}>
+        <div className="flex flex-wrap justify-center space-x-10 ">
+          {boxData}
+        </div>
+      </TabPanel>
+
       <TabPanel value={value} index={2}>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[2].title}
-            icon={cardData[2].icon}
-            description={cardData[2].description}
-          />
-          <PricingCard
-            title={cardData[3].title}
-            icon={cardData[3].icon}
-            description={cardData[3].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[1].title}
-            icon={cardData[1].icon}
-            description={cardData[1].description}
-          />
-          <PricingCard
-            title={cardData[5].title}
-            icon={cardData[5].icon}
-            description={cardData[5].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[4].title}
-            icon={cardData[4].icon}
-            description={cardData[4].description}
-          />
-          <PricingCard
-            title={cardData[3].title}
-            icon={cardData[3].icon}
-            description={cardData[3].description}
-          />
+        <div className="flex flex-wrap justify-center space-x-10 ">
+          {boxData}
         </div>
       </TabPanel>
 
       <TabPanel value={value} index={3}>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[0].title}
-            icon={cardData[0].icon}
-            description={cardData[0].description}
-          />
-          <PricingCard
-            title={cardData[1].title}
-            icon={cardData[1].icon}
-            description={cardData[1].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[2].title}
-            icon={cardData[2].icon}
-            description={cardData[2].description}
-          />
-          <PricingCard
-            title={cardData[3].title}
-            icon={cardData[3].icon}
-            description={cardData[3].description}
-          />
-        </div>
-        <div className="flex justify-center space-x-10 ">
-          <PricingCard
-            title={cardData[4].title}
-            icon={cardData[4].icon}
-            description={cardData[4].description}
-          />
-          <PricingCard
-            title={cardData[5].title}
-            icon={cardData[5].icon}
-            description={cardData[5].description}
-          />
+        <div className="flex flex-wrap justify-center space-x-10 ">
+          {boxData}
         </div>
       </TabPanel>
     </Box>
