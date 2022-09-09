@@ -21,7 +21,10 @@ const Header = () => {
             <li>Blog</li>
             <li>Contact</li>
           </ul>
-          <button id="nav-btn" className="flex px-7 py-4 text-white rounded-md">
+          <button
+            id="nav-btn"
+            className="flex px-7 py-4 text-white rounded-md hover:bg-white"
+          >
             Appointment <FaArrowRight className={classes.arrow} />
           </button>
         </div>

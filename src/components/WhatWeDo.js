@@ -45,7 +45,7 @@ const WhatWeDo = () => {
         <div className="flex items-center space-x-8">
           <div className="flex items-center border-grayBorder border-solid border rounded-md px-9 py-10  mb-5">
             <img
-              src="https://cdn-icons-png.flaticon.com/512/2382/2382633.png"
+              src="https://cdn-icons-png.flaticon.com/512/3465/3465261.png"
               alt="hair cutting at barber shop"
               className="relative w-12 h-12 mr-3"
             />

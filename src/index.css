@@ -11,6 +11,12 @@ body {
 
 #nav-btn {
   background-color: #d6a354;
+  transition: 0.4s;
+}
+
+#nav-btn:hover {
+  background-color: white;
+  color: #d6a354;
 }
 
 .play-btn {
@@ -157,4 +163,8 @@ body {
 
 #footer-bg {
   background-image: url("./assets/footer.png");
+}
+
+#formBg {
+  background-image: url("./assets/contact-bg.png");
 }

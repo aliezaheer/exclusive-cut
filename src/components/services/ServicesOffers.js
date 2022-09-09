@@ -48,16 +48,17 @@ const ServicesOffers = () => {
     },
   ];
 
-  const allServices = servicesOffers.map((ser) => (
-    <li className="indv-item ">
+  const allServices = servicesOffers.map((ser) => {
+    const { id, title, description, icon } = ser;
+    <li className="indv-item" key={ser.id}>
       <ServiceBlock
-        key={ser.id}
-        title={ser.title}
-        description={ser.description}
-        icon={ser.icon}
+        id={id}
+        title={title}
+        description={description}
+        icon={icon}
       />
-    </li>
-  ));
+    </li>;
+  });
 
   return (
     <>
