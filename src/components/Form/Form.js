@@ -17,23 +17,27 @@ const Form = () => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const newCustomer = {
-      storeName,
-      email,
-      phone,
-      category,
-      date,
-      message,
-    };
+    if ((storeName && email && phone && category && date) || message) {
+      const newCustomer = {
+        storeName,
+        email,
+        phone,
+        category,
+        date,
+        message,
+      };
 
-    setCustomer([...customer, newCustomer]);
+      setCustomer([...customer, newCustomer]);
 
-    setStoreName("");
-    setEmail("");
-    setPhone("");
-    setCategory("");
-    setDate("");
-    setMessage("");
+      setStoreName("");
+      setEmail("");
+      setPhone("");
+      setCategory("");
+      setDate("");
+      setMessage("");
+    } else {
+      alert("Field is empty.");
+    }
   };
 
   return (
@@ -101,8 +105,14 @@ const Form = () => {
                   placeholder="Text Message"
                 />
               </div>
-
-              <button type="submit">Submit</button>
+              <div className="flex justify-center">
+                <button
+                  className="bg-white hover:bg-gray-800 hover:text-white text-myPeach font-bold py-3 px-8 mt-10"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
         </div>
