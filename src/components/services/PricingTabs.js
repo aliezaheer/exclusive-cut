@@ -115,7 +115,12 @@ const PricingTabs = () => {
 
       <TabPanel value={value} index={0}>
         <div className="flex flex-wrap justify-center space-x-10 ">
-          {boxData}
+          {boxData[5]}
+          {boxData[2]}
+          {boxData[1]}
+          {boxData[4]}
+          {boxData[0]}
+          {boxData[3]}
         </div>
       </TabPanel>
 
@@ -127,7 +132,12 @@ const PricingTabs = () => {
 
       <TabPanel value={value} index={2}>
         <div className="flex flex-wrap justify-center space-x-10 ">
-          {boxData}
+          {boxData[3]}
+          {boxData[4]}
+          {boxData[1]}
+          {boxData[4]}
+          {boxData[2]}
+          {boxData[6]}
         </div>
       </TabPanel>
 

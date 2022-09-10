@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       <div className="flex justify-around items-center">
-        <div>
+        <div className="text-white">
           <h1 className="text-8xl font-semibold mb-3 leading-tight">
             BARBERS & <br /> HAIR CUTTING
           </h1>

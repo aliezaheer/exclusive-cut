@@ -3,11 +3,11 @@ import WhatWeDoImg from "../assets/what-we-do.jpg";
 
 const WhatWeDo = () => {
   return (
-    <div className="flex justify-center items-center m-auto pr-12 z-10 bg-white text-black w-7/12 space-x-8 -mt-28 relative z-6">
-      <div className="mr-auto">
+    <div className="flex justify-center items-center m-auto pr-12 z-10 bg-white text-black space-x-8 -mt-28 relative z-6">
+      <div className="">
         <img className="" src={WhatWeDoImg} alt="Guy hairstyles at salon" />
       </div>
-      <div className="mr-auto">
+      <div className="">
         <h3 className="text-4xl font-bold uppercase mb-3">What We Do</h3>
         <div className="leading-relaxed mb-10">
           Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt

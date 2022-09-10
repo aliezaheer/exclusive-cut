@@ -90,7 +90,7 @@ const Form = () => {
       <div className="flex justify-center mt-24">
         <img src={formLeft} alt="" />
 
-        <div id="formBg" className="bg-myPeach py-16 w-5/12">
+        <div id="formBg" className="bg-myPeach py-16 w-50">
           <h3 className="pt-20 text-5xl text-center text-white font-bold ">
             Make Appointment
           </h3>
