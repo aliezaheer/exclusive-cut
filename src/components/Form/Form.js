@@ -40,22 +40,24 @@ const Form = () => {
       setDate("");
       setMessage("");
     } else {
-      alert("Field is empty.");
+      alert("Form fields are empty.");
     }
   };
 
   // email error
 
   const emailErrHandler = (event) => {
-    let err = event.target.value;
-
-    if (err.length < 3) {
+    setEmail(event.target.value);
+    const dat = event.target.value;
+    if (
+      dat.indexOf("@") <= 0 &&
+      dat.charAt(dat.length - 3) != "." &&
+      dat.charAt(dat.length - 4) != "."
+    ) {
       setEmailErr(true);
     } else {
       setEmailErr(false);
     }
-
-    setEmail(event.target.value);
   };
 
   return (
@@ -78,7 +80,7 @@ const Form = () => {
                   name="Full Name"
                   placeholder="Full Name"
                   value={storeName}
-                  onChange={(err) => setStoreName(err.target.value)}
+                  onChange={(event) => setStoreName(event.target.value)}
                 />
                 <input
                   name="Email"
