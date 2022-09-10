@@ -6,6 +6,7 @@ import classes from "./Form.module.css";
 
 const Form = () => {
   const [storeName, setStoreName] = useState("");
+  const [nameErr, setNameErr] = useState(false);
 
   const [email, setEmail] = useState("");
   const [emailErr, setEmailErr] = useState(false);
@@ -45,6 +46,21 @@ const Form = () => {
     }
   };
 
+  // username error
+
+  const nameErrHandler = (event) => {
+    setStoreName(event.target.value);
+  };
+
+  const nameOnBlurHandler = (event) => {
+    const dat = event.target.value;
+    if (dat === "") {
+      setNameErr(true);
+    } else {
+      setNameErr(false);
+    }
+  };
+
   // email error
 
   const emailErrHandler = (event) => {
@@ -57,7 +73,7 @@ const Form = () => {
     }
   };
 
-  // phone number
+  // phone number error
   const phoneErrHandler = (event) => {
     setPhone(event.target.value);
     const dat = event.target.value;
@@ -90,8 +106,15 @@ const Form = () => {
                     name="Full Name"
                     placeholder="Full Name"
                     value={storeName}
-                    onChange={(event) => setStoreName(event.target.value)}
+                    onChange={nameErrHandler}
+                    onBlur={nameOnBlurHandler}
                   />
+                  <br />
+                  {nameErr ? (
+                    <span className={classes.err}>
+                      This field can't be empty.
+                    </span>
+                  ) : null}
                 </div>
                 <div>
                   <input
@@ -116,11 +139,13 @@ const Form = () => {
                     placeholder="Phone Number"
                     value={phone}
                     onChange={phoneErrHandler}
+                    onClick={phoneErrHandler}
+                    type="number"
                   />
                   <br />
                   {phoneErr ? (
                     <span className={classes.err}>
-                      Please type only number in this field.
+                      This field can't be empty and only contains numbers.
                     </span>
                   ) : null}
                 </div>
