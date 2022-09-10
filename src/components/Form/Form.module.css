@@ -19,3 +19,9 @@ select {
 .msgArea {
   width: 97%;
 }
+
+.err {
+  color: #880000;
+  margin-left: 4%;
+  font-size: 1rem;
+}

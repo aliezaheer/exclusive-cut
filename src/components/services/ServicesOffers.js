@@ -50,7 +50,8 @@ const ServicesOffers = () => {
 
   const allServices = servicesOffers.map((ser) => {
     const { id, title, description, icon } = ser;
-    <li className="indv-item" key={ser.id}>
+
+    <li className="indv-item" key={id}>
       <ServiceBlock
         id={id}
         title={title}

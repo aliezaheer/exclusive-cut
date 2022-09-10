@@ -1,4 +1,3 @@
-import { ListItem } from "@mui/material";
 import React, { useState } from "react";
 import formLeft from "../../assets/form-left.jpg";
 import formRight from "../../assets/form-right.jpg";
@@ -12,6 +11,8 @@ const Form = () => {
   const [emailErr, setEmailErr] = useState(false);
 
   const [phone, setPhone] = useState("");
+  const [phoneErr, setPhoneErr] = useState(false);
+
   const [category, setCategory] = useState("");
   const [date, setDate] = useState("");
   const [message, setMessage] = useState("");
@@ -49,14 +50,22 @@ const Form = () => {
   const emailErrHandler = (event) => {
     setEmail(event.target.value);
     const dat = event.target.value;
-    if (
-      dat.indexOf("@") <= 0 &&
-      dat.charAt(dat.length - 3) != "." &&
-      dat.charAt(dat.length - 4) != "."
-    ) {
+    if (dat.indexOf("@") <= 0) {
       setEmailErr(true);
     } else {
       setEmailErr(false);
+    }
+  };
+
+  // phone number
+  const phoneErrHandler = (event) => {
+    setPhone(event.target.value);
+    const dat = event.target.value;
+
+    if (dat === "") {
+      setPhoneErr(true);
+    } else {
+      setPhoneErr(false);
     }
   };
 
@@ -75,41 +84,58 @@ const Form = () => {
           </p>
           <div className="flex justify-center mt-10">
             <form onSubmit={submitHandler}>
-              <div>
-                <input
-                  name="Full Name"
-                  placeholder="Full Name"
-                  value={storeName}
-                  onChange={(event) => setStoreName(event.target.value)}
-                />
-                <input
-                  name="Email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={emailErrHandler}
-                />
-                {emailErr ? (
-                  <span>Please add more than 4 characters.</span>
-                ) : null}
+              <div className="flex">
+                <div>
+                  <input
+                    name="Full Name"
+                    placeholder="Full Name"
+                    value={storeName}
+                    onChange={(event) => setStoreName(event.target.value)}
+                  />
+                </div>
+                <div>
+                  <input
+                    name="Email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={emailErrHandler}
+                  />
+                  <br />
+                  {emailErr ? (
+                    <span className={classes.err}>
+                      Please include the "@" in the email field.
+                    </span>
+                  ) : null}
+                </div>
               </div>
-              <div>
-                <input
-                  name="Phone Number"
-                  placeholder="Phone Number"
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
-                />
 
-                <select
-                  value={category}
-                  onChange={(event) => setCategory(event.target.value)}
-                >
-                  <option>Select The Category</option>
-                  <option>Beauty</option>
-                  <option>Spa</option>
-                  <option>Shaving</option>
-                  <option>Facial</option>
-                </select>
+              <div className="flex">
+                <div>
+                  <input
+                    name="Phone Number"
+                    placeholder="Phone Number"
+                    value={phone}
+                    onChange={phoneErrHandler}
+                  />
+                  <br />
+                  {phoneErr ? (
+                    <span className={classes.err}>
+                      Please type only number in this field.
+                    </span>
+                  ) : null}
+                </div>
+                <div>
+                  <select
+                    value={category}
+                    onChange={(event) => setCategory(event.target.value)}
+                  >
+                    <option>Select The Category</option>
+                    <option>Beauty</option>
+                    <option>Spa</option>
+                    <option>Shaving</option>
+                    <option>Facial</option>
+                  </select>
+                </div>
               </div>
 
               <input

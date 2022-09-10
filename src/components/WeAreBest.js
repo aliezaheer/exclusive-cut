@@ -21,7 +21,7 @@ const WeAreBest = () => {
           qui ratione voluptatem sequi nesciunt.
         </p>
         <div className="flex justify-center mt-16">
-          <img src={Author} alt="this is image of author" />
+          <img src={Author} alt="the author" />
           <h4 className="ml-4 mt-2 font-bold text-lg text-black">
             Randall J. Goodamn
             <img src={Signature} alt="Auther signature" />
