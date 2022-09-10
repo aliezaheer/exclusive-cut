@@ -1,3 +1,4 @@
+import { ListItem } from "@mui/material";
 import React, { useState } from "react";
 import formLeft from "../../assets/form-left.jpg";
 import formRight from "../../assets/form-right.jpg";
@@ -6,7 +7,10 @@ import classes from "./Form.module.css";
 
 const Form = () => {
   const [storeName, setStoreName] = useState("");
+
   const [email, setEmail] = useState("");
+  const [emailErr, setEmailErr] = useState(false);
+
   const [phone, setPhone] = useState("");
   const [category, setCategory] = useState("");
   const [date, setDate] = useState("");
@@ -40,6 +44,20 @@ const Form = () => {
     }
   };
 
+  // email error
+
+  const emailErrHandler = (event) => {
+    let err = event.target.value;
+
+    if (err.length < 3) {
+      setEmailErr(true);
+    } else {
+      setEmailErr(false);
+    }
+
+    setEmail(event.target.value);
+  };
+
   return (
     <>
       <div className="flex justify-center mt-24">
@@ -60,14 +78,17 @@ const Form = () => {
                   name="Full Name"
                   placeholder="Full Name"
                   value={storeName}
-                  onChange={(event) => setStoreName(event.target.value)}
+                  onChange={(err) => setStoreName(err.target.value)}
                 />
                 <input
                   name="Email"
                   placeholder="Email"
                   value={email}
-                  onChange={(event) => setEmail(event.target.value)}
+                  onChange={emailErrHandler}
                 />
+                {emailErr ? (
+                  <span>Please add more than 4 characters.</span>
+                ) : null}
               </div>
               <div>
                 <input
@@ -116,7 +137,6 @@ const Form = () => {
             </form>
           </div>
         </div>
-
         <img src={formRight} alt="" />
       </div>
     </>
