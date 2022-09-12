@@ -6,7 +6,7 @@ const PricingPlan = () => {
   return (
     <>
       <div className={classes.pricingBg}>
-        <div className="flex justify-center text-center mt-20 text-white">
+        <div className="flex justify-center text-center text-white">
           <div>
             <h3 className="text-5xl font-bold mt-20 mb-5">
               Awesome Pricing Plan

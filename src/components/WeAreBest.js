@@ -7,8 +7,10 @@ import Signature from "../assets/signature.png";
 const WeAreBest = () => {
   return (
     <div className="flex items-center mt-40">
-      <img className="ml-20" src={AboutLeft} alt="Hiar Cutting Experience" />
-      <div className="text-center px-28 mt-3">
+      <div class="w-100">
+        <img className="" src={AboutLeft} alt="Hiar Cutting Experience" />
+      </div>
+      <div className="text-center px-28 mt-3 w-8/12">
         <h3 className="text-5xl font-bold text-black leading-tight tracking-normal mb-8">
           WE’RE BEST BARBERS & HAIR <br /> CUTTING SALON
         </h3>
@@ -28,7 +30,9 @@ const WeAreBest = () => {
           </h4>
         </div>
       </div>
-      <img className="" src={AboutRight} alt="Hair salon " />
+      <div class="w-100">
+        <img className="" src={AboutRight} alt="Hair salon " />
+      </div>
     </div>
   );
 };

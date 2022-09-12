@@ -63,9 +63,9 @@ const ServicesOffers = () => {
 
   return (
     <>
-      <div className="relative text-center">
+      <div className="flex justify-center relative text-center">
         <img className="bg-myPeach w-full h-32" src={ctaBG} alt="" />
-        <div className="flex absolute top-1/3 bottom-1/2 translate-x-3/4 z-9">
+        <div className="flex absolute top-1/3 bottom-1/2 z-9">
           <h3 className=" text-white text-5xl font-bold ">
             Ready To get our Service ?
           </h3>
@@ -76,7 +76,7 @@ const ServicesOffers = () => {
       </div>
 
       <div className="">
-        <ul className="flex flex-wrap basis-6/12 items-center justify-center text-center mt-16 space-x-12 mx-12">
+        <ul className="flex flex-wrap basis-6/12 items-center justify-center text-center mt-20 space-x-12 mx-12">
           {allServices}
         </ul>
       </div>
