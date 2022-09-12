@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -19,9 +20,15 @@ const Hero = () => {
           </button>
         </div>
         <div>
-          <div className="play-btn">
+          <motion.div
+            className="play-btn"
+            animate={{
+              scale: [1, 2, 2, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+            }}
+          >
             <FaPlay className="fa-play" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

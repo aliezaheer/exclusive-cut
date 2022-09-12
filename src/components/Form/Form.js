@@ -87,7 +87,7 @@ const Form = () => {
 
   return (
     <>
-      <div className="flex justify-center mt-24">
+      <div className="flex justify-center mr-auto ml-auto mt-24 w-3/12">
         <img src={formLeft} alt="" />
 
         <div id="formBg" className="bg-myPeach py-16 w-50">
