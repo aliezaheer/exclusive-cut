@@ -96,7 +96,7 @@ const PricingTabs = () => {
   };
 
   return (
-    <Box className=" bg-white my-12 mx-auto" sx={{ width: "58%" }}>
+    <Box className="bg-white my-12 mx-auto 2xl:w-7/12">
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           className="pt-12"

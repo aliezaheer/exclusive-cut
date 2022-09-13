@@ -28,7 +28,7 @@ const WeAreBest = () => {
           aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
           qui ratione voluptatem sequi nesciunt.
         </p>
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-16 mb-12">
           <img src={Author} alt="the author" />
           <h4 className="ml-4 mt-2 font-bold text-lg text-black">
             Randall J. Goodamn
