@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="flex justify-around items-center">
         <div className="text-white">
-          <h1 className="text-8xl font-semibold mb-3 leading-tight">
+         <h1 className="text-8xl font-semibold mb-3 leading-tight">
             BARBERS & <br /> HAIR CUTTING
           </h1>
           <p className="text-lg tracking-wider mb-6">
@@ -26,6 +26,8 @@ const Hero = () => {
               scale: [1, 2, 2, 1, 1],
               rotate: [0, 0, 270, 270, 0],
             }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FaPlay className="fa-play" />
           </motion.div>
