@@ -37,7 +37,7 @@ const WeAreBest = () => {
         </div>
       </div>
       <motion.div
-        class="w-100"
+        className="w-100"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

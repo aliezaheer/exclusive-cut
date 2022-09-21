@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <div className="flex justify-around items-center">
         <div className="text-white">
-         <h1 className="text-8xl font-semibold mb-3 leading-tight">
+          <h1 className="text-8xl font-semibold mb-3 leading-tight">
             BARBERS & <br /> HAIR CUTTING
           </h1>
           <p className="text-lg tracking-wider mb-6">
