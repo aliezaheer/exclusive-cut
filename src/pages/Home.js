@@ -20,8 +20,16 @@ const Home = () => {
         <WhatWeDo className="z-10" />
       </motion.div>
       <WeAreBest />
+
       <ServicesOffers />
-      <PricingPlan />
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <PricingPlan />
+      </motion.div>
       <GalleySec />
     </>
   );
