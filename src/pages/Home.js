@@ -6,11 +6,19 @@ import ServicesOffers from "../components/services/ServicesOffers";
 import WeAreBest from "../components/WeAreBest";
 import WhatWeDo from "../components/WhatWeDo";
 
+import { motion } from "framer-motion";
+
 const Home = () => {
   return (
     <>
       <Header />
-      <WhatWeDo className="z-10" />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <WhatWeDo className="z-10" />
+      </motion.div>
       <WeAreBest />
       <ServicesOffers />
       <PricingPlan />

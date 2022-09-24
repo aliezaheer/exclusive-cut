@@ -26,13 +26,9 @@ const GalleyArea = () => {
           alt=""
         />
         <motion.img
-          initial={{ scale: 0 }}
-          animate={{ rotate: 360, scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 260,
-            damping: 20,
-          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
           className="w-3/12"
           src={thirdImg}
           alt=""

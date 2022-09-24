@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceBlock from "./ServiceBlock";
 import ctaBG from "../../assets/cta-bg.png";
+import { motion } from "framer-motion";
 
 const ServicesOffers = () => {
   const servicesOffers = [
